@@ -1,0 +1,251 @@
+.main-container__content--first {
+    background-color: #F8F7F3;
+    display: flex;
+    padding: 80px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    align-self: stretch;
+}
+
+.main-container__content--first h1 {
+    color: #1F4827;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.main-container__content--first p {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*SINTOMAS*/
+.main-container__content--second {
+    background-color: #1F4827;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container__content__image-sintomas {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("../images/sintomasHombre-mobile.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dot::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0px;
+    left: -200%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(15px);
+}
+
+.dot:hover::after {
+    opacity: 1;
+}
+
+
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #a6c947ca;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.dot:hover {
+    background-color: #8CAB3C;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.main-container__content__text-sintomas__title {
+    padding: 80px 24px  0 60px; 
+}
+
+.main-container__content__text-sintomas__title h2 {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.main-container__content__text-sintomas__title p {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-container__content__text-sintomas__title span {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.main-container__content__text-sintomas__list ul {
+    display: none;
+}
+
+.dot[data-text="Dolor de cabeza"] {
+    top: 20%;
+    left: 43%;
+}
+
+.dot[data-text="Fiebre"] {
+    top: 20%;
+    left: 57%;
+}
+
+.dot[data-text="Goteo Nasal"] {
+    top: 33%;
+    left: 56%;
+}
+
+.dot[data-text="Cansancio"] {
+    top: 52%;
+    left: 33%;
+}
+
+.dot[data-text="Dolor de garganta"] {
+    top: 50%;
+    left: 49%;
+}
+
+.dot[data-text="Congestión"] {
+    top: 58%;
+    left: 66%;
+}
+.main-container__content__text-sintomas__list{
+    display: none;
+}
+
+
+
+
+
+
+
+/* Estilos para tablets y pantallas más grandes */
+@media (min-width: 600px) {}
+
+/* Estilos para pantallas de tamaño mediano (laptops) */
+@media (min-width: 768px) {}
+
+/* Estilos para pantallas grandes (desktops) */
+@media (min-width: 992px) {
+    .main-container__content__text-sintomas {
+        width: 70%;
+        margin: auto;
+    }
+
+    .main-container__content--first {
+        padding: 100px 70px;
+        justify-content: center;
+    }
+
+    .main-container__content--first h1 {
+        color: #1F4827;
+        font-size: 48px;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
+    .main-container__content--first p {
+        color: #000;
+        font-size: 18px;
+    }
+
+    .main-container__content--second {
+        flex-direction: row;
+        height: 90vh;
+    }
+
+    .main-container__content__image-sintomas {
+        background-image: url("../images/sintomasHombre-desktop2.png");
+    }
+}
+
+
+/* Estilos para pantallas extra grandes (larger desktops) */
+@media (min-width: 1367px) {
+    .main-container__content--second {
+        padding: 0.2px;
+    }
+    .main-container__content--second {
+        height: 76vh;
+    }
+
+
+    .main-container__content__text-sintomas__list ul {
+        display: inline-flex;
+    }
+
+    .main-container__content__text-sintomas__title h2{
+        color: #FFF;
+        font-family: "Roboto";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .main-container__content__text-sintomas__title {
+        padding: 15% 10%;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .main-container__content__text-sintomas__list ul {
+        display: inline-flex;
+    }
+    .main-container__content__image-sintomas {
+        background-image: url("../images/sintomasHombre-desktop.png");
+    }
+}
