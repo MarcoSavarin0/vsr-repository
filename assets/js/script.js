@@ -19,11 +19,11 @@ window.addEventListener("load", function () {
         siBox.classList.remove('active');
     });
     document.getElementById('toggle-icon').addEventListener('click', function() {
-        var referencias = document.getElementById('referencias');
-        referencias.classList.toggle('open');
+        let referencias = document.getElementById('referencias');
+        referencias.classList.toggle('show');
         
-        var icon = this.querySelector('i');
-        if (referencias.classList.contains('open')) {
+        let icon = this.querySelector('i');
+        if (referencias.classList.contains('show')) {
             icon.classList.remove('fa-plus');
             icon.classList.add('fa-minus');
         } else {
