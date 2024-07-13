@@ -63,20 +63,33 @@
     backdrop-filter: blur(15px);
 }
 
+
 .dot:hover::after {
     opacity: 1;
 }
 
+.dot::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D3FB58;
+}
 
 .dot {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: #a6c947ca;
     border-radius: 50%;
     cursor: pointer;
     animation: pulse 2s infinite;
 }
+
+
 
 .dot:hover {
     background-color: #8CAB3C;
@@ -99,7 +112,7 @@
 
 
 .main-container__content__text-sintomas__title {
-    padding: 80px 24px  0 60px; 
+    padding: 80px 24px 0 24px;
 }
 
 .main-container__content__text-sintomas__title h2 {
@@ -115,6 +128,7 @@
     color: #FFF;
     font-family: Roboto;
     font-size: 16px;
+    letter-spacing: 0.8px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -123,7 +137,7 @@
 .main-container__content__text-sintomas__title span {
     color: #FFF;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -163,13 +177,223 @@
     top: 58%;
     left: 66%;
 }
-.main-container__content__text-sintomas__list{
+
+.main-container__content__text-sintomas__list {
     display: none;
 }
 
+.main-container__content--third {
+    background-color: #1E1E1E;
+    padding: 80px 24px 100px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    height: 100%;
+}
 
+.main-container__content__box-1 {
+    border-radius: 16px;
+    background: #D3FB58;
+    display: flex;
+    padding: 80px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    max-width: 600px;
+}
 
+.main-container__content__box-1 h3 {
+    flex: 1 0 0;
+    color: #1F4827;
+    font-family: Roboto;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 
+.main-container__content__box-1 p {
+    flex: 1 0 0;
+    font-family: Roboto;
+    margin-top: 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-container__content__box-2 {
+    border-radius: 16px;
+    background: #D3FB58;
+    display: flex;
+    padding: 80px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    max-width: 600px;
+}
+
+.main-container__content__box-2 h3 {
+    flex: 1 0 0;
+    color: #1F4827;
+    font-family: Roboto;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.main-container__content__box-2 p {
+    flex: 1 0 0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-container__content__section-question {
+    height: 100%;
+    padding: 80px 24px;
+    background-color: #1F4827;
+}
+
+.main-container__content__section-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.main-container__content__section-question h4 {
+    flex: 1 0 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.main-container__content__section-question__box-answer_si {
+    text-align: center;
+    background-color: #FFF;
+    width: 348px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    padding: 2.2%;
+    margin-bottom: 24px;
+}
+
+.main-container__content__section-question__box-answer_si p {
+    align-self: stretch;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.main-container__content__section-question__box-answer_no {
+    text-align: center;
+    background-color: #FFF;
+    width: 348px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    padding: 2.2%;
+}
+
+.main-container__content__section-question__box-answer_no p {
+    align-self: stretch;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.main-container__content__section-question hr {
+    width: 80%;
+    height: 1px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.main-container__content__section-question__response {
+
+    text-align: center;
+    flex: 1 0 0;
+    font-size: 16px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-container__content__section-question__box-answer_si:hover,
+.main-container__content__section-question__box-answer_no:hover {
+    background-color: #E5FD9B;
+}
+
+.main-container__content__section-question__box-answer_si.active,
+.main-container__content__section-question__box-answer_no.active {
+    background-color: #D3FB58;
+}
+
+.main-container__content__section-question__response,
+.main-container__content__section-question hr {
+    display: none;
+}
+
+.main-container__content--fifth {
+    display: flex;
+    width: 100%;
+
+    padding: 80px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+}
+
+.main-container__content__section-sabiasque {
+    display: flex;
+    padding: 48px 64px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-self: stretch;
+    border-radius: 16px;
+    background-color: #D3FB58;
+}
+
+.main-container__content__section-sabiasque h4 {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 
 
 
@@ -177,19 +401,24 @@
 @media (min-width: 600px) {}
 
 /* Estilos para pantallas de tamaño mediano (laptops) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .main-container__content--third {
+        gap: 15px;
+    }
+
+}
 
 /* Estilos para pantallas grandes (desktops) */
 @media (min-width: 992px) {
+    .main-container__content--second {
+        height: 60vh;
+    }
+
     .main-container__content__text-sintomas {
         width: 70%;
         margin: auto;
     }
 
-    .main-container__content--first {
-        padding: 100px 70px;
-        justify-content: center;
-    }
 
     .main-container__content--first h1 {
         color: #1F4827;
@@ -205,30 +434,151 @@
 
     .main-container__content--second {
         flex-direction: row;
-        height: 90vh;
+        height: 62vh;
+    }
+
+    .main-container__content__text-sintomas__title {
+        padding: 15% 0 2% 0;
+        width: 75%;
+        margin: 0 auto;
     }
 
     .main-container__content__image-sintomas {
-        background-image: url("../images/sintomasHombre-desktop2.png");
+        background-image: url("../images/sintomasHombre-desktop.png");
     }
+
+    .main-container__content__text-sintomas__list {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .main-container__content__text-sintomas__list {
+        display: inline-flex;
+    }
+
+    .icon-boxes .icon-box {
+        text-align: left;
+
+        padding: 20px 20px 20px 0;
+        width: 100%;
+        display: flex;
+        margin: 0 0;
+        color: white;
+        gap: 15px;
+    }
+
+    .icon-boxes .icon-box h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .icon-boxes .icon-box img {
+        display: flex;
+        padding: 8px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 4px;
+        background: #D3FB58;
+        font-size: 40px;
+        color: black;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-box img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        background: #D3FB58;
+        padding: 8px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .icon-box h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+    }
+
+    .box-containers-sintomas {
+        margin-left: 12.4%;
+    }
+
+    .main-container__content__box-1 h3 {
+        font-size: 39px;
+    }
+
+    .main-container__content__box-2 h3 {
+        font-size: 39px;
+    }
+
+    .main-container__content__box-1 p {
+        font-size: 18px;
+
+    }
+
+    .main-container__content__box-2 p {
+        font-size: 18px;
+    }
+
+    .main-container__content__section-question__box-answer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .main-container__content__section-question__box-answer_si {
+        display: flex;
+        width: 273px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-container__content__section-question__box-answer_no {
+        display: flex;
+        width: 273px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-container__content--fifth {
+        padding: 100px 0;
+    }
+
 }
 
 
 /* Estilos para pantallas extra grandes (larger desktops) */
-@media (min-width: 1367px) {
+@media (min-width: 1360px) {
     .main-container__content--second {
         padding: 0.2px;
     }
+
     .main-container__content--second {
         height: 76vh;
     }
 
-
-    .main-container__content__text-sintomas__list ul {
-        display: inline-flex;
-    }
-
-    .main-container__content__text-sintomas__title h2{
+    .main-container__content__text-sintomas__title h2 {
         color: #FFF;
         font-family: "Roboto";
         font-size: 48px;
@@ -237,14 +587,6 @@
         line-height: normal;
     }
 
-    .main-container__content__text-sintomas__title {
-        padding: 15% 10%;
-        width: 75%;
-        margin: 0 auto;
-    }
-    .main-container__content__text-sintomas__list ul {
-        display: inline-flex;
-    }
     .main-container__content__image-sintomas {
         background-image: url("../images/sintomasHombre-desktop.png");
     }
