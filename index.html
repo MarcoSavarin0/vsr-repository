@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Favicons -->
+    <link href="../assets/images/faviconvsr.jpeg" rel="icon">
+    <link href="../assets/images/faviconvsr.jpeg" rel="apple-touch-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -24,7 +27,7 @@
 
 <body>
     <nav class="nav-container">
-        <div class="nav-container__logo">
+        <div class="nav-container__logo" id="header-logo">
             <img src="../assets/images/logo.png" alt="logo" class="img-fluid">
         </div>
         <hr class="nav-container__hr">
@@ -91,7 +94,7 @@
                         crónicas²</p>
                     <span>Los síntomas del VSR pueden incluir:</span>
                 </div>
-                <div class="col-lg-12 d-flex align-items-stretch justify-content-center box-containers-sintomas">
+                <div class="col-lg-9 d-flex align-items-stretch justify-content-center box-containers-sintomas">
                     <div class="icon-boxes d-flex flex-column justify-content-center d-none d-xl-flex">
                         <div class="row">
                             <div class="col-xl-6 d-flex align-items-stretch">
@@ -184,9 +187,13 @@
                         <p>NO</p>
                     </div>
                 </div>
-                <hr>
-                <p class="main-container__content__section-question__response" id="question-response">¡Sí! El VSR es una
-                    de las principales causas de neumonía viral en adultos mayores⁵</p>
+                <hr class="hr-question">
+                <p class="main-container__content__section-question__response response-si" id="question-response__si">
+                    Sí! El VSR es una de las principales causas de neumonía viral en adultos mayores⁵
+                </p>
+                <p class="main-container__content__section-question__response response-no" id="question-response__no">
+                    El VSR es una de las principales causas de neumonía viral en adultos mayores5.
+                </p>
             </div>
         </div>
         <div class="main-container__content main-container__content--fifth">
@@ -205,14 +212,21 @@
                 <p>Hablá con tu médico o médica acerca de la vacunación y otras maneras de protegerte contra el VSR.</p>
                 <p>Compartir: </p>
                 <div class="main-container__content__section-CTA__social-media">
-                    <div class="main-container__content__section-CTA__social-media__item"><i
-                            class="fa-brands fa-x-twitter"></i>
+                    <div class="main-container__content__section-CTA__social-media__item"> <a
+                            href="https://twitter.com/intent/tweet?text=ESTE%20ENCUENTRO%20PODR%C3%8DA%20SER%20INTERRUMPIDO%20POR%20EL%20VSR%20https://virusvsr.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                     <div class="main-container__content__section-CTA__social-media__item">
-                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://virusvsr.com/&title=ESTE%20ENCUENTRO%20PODR%C3%8DA%20SER%20INTERRUMPIDO%20POR%20EL%20VSR&summary=ESTE%20ENCUENTRO%20PODR%C3%8DA%20SER%20INTERRUMPIDO%20POR%20EL%20VSR&source=https://virusvsr.com/"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <div class="main-container__content__section-CTA__social-media__item">
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://virusvsr.com/" target="_blank"
+                            class="facebook" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
             </div>

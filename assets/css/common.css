@@ -19,15 +19,23 @@ body {
     justify-content: space-between;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.87s ease;
 }
 
 .nav-container__logo {
-    padding: 10px 4px;
+    padding: 20px 4px;
+    position: static;
+    transition: all 0.5s ease;
 }
 
 .nav-container__logo img {
     width: 100%;
     max-width: 210px;
+    position: static;
 }
 
 .nav-container__menu__hamburguer {
@@ -35,6 +43,7 @@ body {
     font-size: 26px;
     cursor: pointer;
     padding: 10px 20px;
+
 }
 
 .nav-container__menu {
@@ -47,6 +56,7 @@ body {
     display: flex;
     list-style: none;
     gap: 20px;
+    transition: padding 1s ease;
 }
 
 .nav-container__menu__list__item__link {
@@ -63,6 +73,7 @@ body {
     width: 100%;
     height: 75vh;
     overflow: hidden;
+    margin-top: 7%;
 }
 
 .header-video {
@@ -124,14 +135,21 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .main-container__content__section-CTA__social-media__item i {
     font-size: 24px;
     color: #1F4827;
 }
+.main-container__content__section-CTA__social-media__item:hover {
+    background-color: #E5FD9B;
+    color: #1f4827e2;
+}
 
 .container-references {
+    background-color: #FBFBFB;
     padding: 30px
 }
 
@@ -167,6 +185,9 @@ body {
 .contenedor-referencias.show {
     max-height: 700px;
     padding: 15px;
+}
+#toggle-icon{
+    cursor: pointer;
 }
 
 .footer-top {
@@ -282,6 +303,14 @@ body {
         gap: 10px;
     }
 
+    .efecto-menu-conatainer {
+        transform: translateY(-88px);
+    }
+
+    .menu-list-padding {
+        padding: 5px;
+    }
+
     .nav-container__menu {
         position: static;
         height: auto;
@@ -307,6 +336,7 @@ body {
         position: relative;
         width: 100%;
         height: 500px;
+        margin-top: 7%;
     }
 
     .header-video__container__mobile {
@@ -331,7 +361,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-
     }
 
     .nav-container__hr {
@@ -339,10 +368,19 @@ body {
         width: 100%;
         border: 1px solid #000000;
         margin-right: 0;
+        margin: 4px 0 10px 0;
     }
 
     .nav-container__logo {
         padding-top: 20px;
+    }
+
+    .efecto-menu-conatainer {
+        transform: translateY(-88px);
+    }
+
+    .menu-list-padding {
+        padding: 5px;
     }
 
     .nav-container__logo img {

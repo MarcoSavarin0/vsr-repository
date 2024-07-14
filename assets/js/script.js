@@ -18,10 +18,10 @@ window.addEventListener("load", function () {
         noBox.classList.add('active');
         siBox.classList.remove('active');
     });
-    document.getElementById('toggle-icon').addEventListener('click', function() {
+    document.getElementById('toggle-icon').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
         referencias.classList.toggle('show');
-        
+
         let icon = this.querySelector('i');
         if (referencias.classList.contains('show')) {
             icon.classList.remove('fa-plus');
@@ -31,6 +31,41 @@ window.addEventListener("load", function () {
             icon.classList.add('fa-plus');
         }
     });
-    
+    const menuList = document.getElementById('menu');
+    const navContainer = document.querySelector('.nav-container');
 
+    window.addEventListener('scroll', function () {
+        if (window.innerWidth > 770) {
+            if (window.scrollY > 50) {
+                navContainer.classList.add('efecto-menu-conatainer');
+                menuList.classList.add('menu-list-padding');
+            } else {
+                navContainer.classList.remove('efecto-menu-conatainer');
+                menuList.classList.remove('menu-list-padding');
+            }
+        } else {
+            navContainer.classList.remove('efecto-menu-conatainer');
+            menuList.classList.remove('menu-list-padding');
+        }
+    });
+
+    const responseSi = document.querySelector('.main-container__content__section-question__box-answer_si');
+    const responseNo = document.querySelector('.main-container__content__section-question__box-answer_no');
+    const responseTextSi = document.querySelector('.response-si');
+    const responseTextNo = document.querySelector('.response-no');
+    const hrQuestion = document.querySelector('.hr-question');
+    
+    responseSi.addEventListener('click', function () {
+        // Ocultar respuesta "No" y mostrar "Sí"
+        responseTextNo.classList.remove('active');
+        hrQuestion.classList.add('active');
+        responseTextSi.classList.add('active');
+    });
+    
+    responseNo.addEventListener('click', function () {
+        // Ocultar respuesta "Sí" y mostrar "No"
+        responseTextSi.classList.remove('active');
+        hrQuestion.classList.add('active');
+        responseTextNo.classList.add('active');
+    });
 });

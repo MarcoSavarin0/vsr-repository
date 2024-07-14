@@ -293,6 +293,11 @@
     margin-bottom: 24px;
 }
 
+.main-container__content__section-question__box-answer_no:active,
+.main-container__content__section-question__box-answer_si:active {
+    transform: scale(0.95);
+}
+
 .main-container__content__section-question__box-answer_si p {
     align-self: stretch;
     text-align: center;
@@ -330,6 +335,7 @@
     height: 1px;
     color: #ffffff;
     margin-bottom: 24px;
+    transition: all 0.5s ease;
 }
 
 .main-container__content__section-question__response {
@@ -343,6 +349,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: all 0.5s ease;
 }
 
 .main-container__content__section-question__box-answer_si:hover,
@@ -355,9 +362,45 @@
     background-color: #D3FB58;
 }
 
-.main-container__content__section-question__response,
-.main-container__content__section-question hr {
+@keyframes fadeIn {
+    from {
+        display: block;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hr-question {
+    transition: opacity 1s ease-in;
+    opacity: 0;
     display: none;
+    visibility: hidden;
+}
+
+.hr-question.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.response-si,
+.response-no {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+}
+
+.response-si.active,
+.response-no.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .main-container__content--fifth {
@@ -383,6 +426,7 @@
     align-self: stretch;
     border-radius: 16px;
     background-color: #D3FB58;
+    text-align: center;
 }
 
 .main-container__content__section-sabiasque h4 {
@@ -392,6 +436,16 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
+    line-height: normal;
+}
+
+.main-container__content__section-sabiasque p {
+    color: var(--color-primario-neutral-900, #000);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -549,6 +603,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
     }
 
     .main-container__content__section-question__box-answer_no {
@@ -559,6 +614,8 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
+
     }
 
     .main-container__content--fifth {
