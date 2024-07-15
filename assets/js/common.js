@@ -1,23 +1,12 @@
 window.addEventListener("load", function () {
-    console.log("load");
     const hamburguer = document.getElementById("hamburguer");
     hamburguer.addEventListener("click", function () {
         document.querySelector('.nav-container').classList.toggle('active');
         hamburguer.classList.toggle("fa-bars");
         hamburguer.classList.toggle("fa-xmark");
     });
-    const siBox = document.querySelector('.main-container__content__section-question__box-answer_si');
-    const noBox = document.querySelector('.main-container__content__section-question__box-answer_no');
 
-    siBox.addEventListener('click', function () {
-        siBox.classList.add('active');
-        noBox.classList.remove('active');
-    });
-
-    noBox.addEventListener('click', function () {
-        noBox.classList.add('active');
-        siBox.classList.remove('active');
-    });
+    
     document.getElementById('toggle-icon').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
         referencias.classList.toggle('show');
@@ -48,24 +37,6 @@ window.addEventListener("load", function () {
             menuList.classList.remove('menu-list-padding');
         }
     });
-
-    const responseSi = document.querySelector('.main-container__content__section-question__box-answer_si');
-    const responseNo = document.querySelector('.main-container__content__section-question__box-answer_no');
-    const responseTextSi = document.querySelector('.response-si');
-    const responseTextNo = document.querySelector('.response-no');
-    const hrQuestion = document.querySelector('.hr-question');
+ 
     
-    responseSi.addEventListener('click', function () {
-        // Ocultar respuesta "No" y mostrar "Sí"
-        responseTextNo.classList.remove('active');
-        hrQuestion.classList.add('active');
-        responseTextSi.classList.add('active');
-    });
-    
-    responseNo.addEventListener('click', function () {
-        // Ocultar respuesta "Sí" y mostrar "No"
-        responseTextSi.classList.remove('active');
-        hrQuestion.classList.add('active');
-        responseTextNo.classList.add('active');
-    });
 });

@@ -59,11 +59,21 @@
     transition: opacity 0.3s;
     pointer-events: none;
     border-radius: 20px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.155) 100%);
     backdrop-filter: blur(15px);
 }
-
-
+.dot[data-text="Fiebre"]::after {
+    left: 260%;
+}
+.dot[data-text="Goteo Nasal"]::after {
+    left: 290%;
+}
+.dot[data-text="Dolor de garganta"]::after {
+    left: 400%;
+}
+.dot[data-text="Congestión"]::after {
+    left: 280%;
+}
 .dot:hover::after {
     opacity: 1;
 }
@@ -615,7 +625,6 @@
         align-items: center;
         gap: 10px;
         cursor: pointer;
-
     }
 
     .main-container__content--fifth {
