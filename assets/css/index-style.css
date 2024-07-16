@@ -63,16 +63,16 @@
     backdrop-filter: blur(15px);
 }
 .dot[data-text="Fiebre"]::after {
-    left: 260%;
+    left: 230%;
 }
 .dot[data-text="Goteo Nasal"]::after {
-    left: 290%;
+    left: 270%;
 }
 .dot[data-text="Dolor de garganta"]::after {
-    left: 400%;
+    left: 360%;
 }
 .dot[data-text="Congestión"]::after {
-    left: 280%;
+    left: -200%;
 }
 .dot:hover::after {
     opacity: 1;
