@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
         hamburguer.classList.toggle("fa-xmark");
     });
 
-    
+
     document.getElementById('toggle-icon').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
         referencias.classList.toggle('show');
@@ -37,6 +37,5 @@ window.addEventListener("load", function () {
             menuList.classList.remove('menu-list-padding');
         }
     });
- 
     
 });
