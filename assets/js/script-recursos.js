@@ -8,6 +8,12 @@ window.addEventListener("load", function () {
             acordeonItems.forEach(item => {
                 if (item.classList.contains('show')) {
                     item.classList.remove('show');
+                    const header = item.previousElementSibling;
+                    const icon = header.querySelector('.fa-solid');
+                    if (icon) {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    }
                 }
             });
         });
@@ -33,4 +39,25 @@ window.addEventListener("load", function () {
             }
         });
     })
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const collapse = item.querySelector('.accordion-collapse');
+        const icon = header.querySelector('.fa-solid');
+    
+        collapse.addEventListener('shown.bs.collapse', function () {
+            if (icon) {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        });
+    
+        collapse.addEventListener('hidden.bs.collapse', function () {
+            if (icon) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            }
+        });
+    });
+    
+    
 })

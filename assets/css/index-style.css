@@ -635,6 +635,11 @@
 
 
 /* Estilos para pantallas extra grandes (larger desktops) */
+@media (max-height: 800px) {
+    .main-container__content--second {
+        height: 88vh;
+    }
+}
 @media (min-width: 1360px) {
     .main-container__content--second {
         padding: 0.2px;
