@@ -62,18 +62,23 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.155) 100%);
     backdrop-filter: blur(15px);
 }
+
 .dot[data-text="Fiebre"]::after {
     left: 230%;
 }
+
 .dot[data-text="Goteo Nasal"]::after {
     left: 270%;
 }
+
 .dot[data-text="Dolor de garganta"]::after {
     left: 360%;
 }
+
 .dot[data-text="Congestión"]::after {
     left: -200%;
 }
+
 .dot:hover::after {
     opacity: 1;
 }
@@ -502,8 +507,8 @@
     }
 
     .main-container__content__text-sintomas__title {
-        padding: 15% 0 2% 0;
-        width: 75%;
+        padding: 18% 0 1% 0;
+        width: 66%;
         margin: 0 auto;
     }
 
@@ -578,7 +583,7 @@
     }
 
     .box-containers-sintomas {
-        margin-left: 12.4%;
+        margin-left: 16.7%;
     }
 
     .main-container__content__box-1 h3 {
@@ -640,14 +645,21 @@
         height: 88vh;
     }
 }
+
 @media (min-width: 1360px) {
-    .main-container__content--second {
-        padding: 0.2px;
+
+    .icon-boxes {
+        padding: 0px 10px 50px 10px;
     }
 
     .main-container__content--second {
         height: 76vh;
     }
+
+    .main-container__content__text-sintomas__title {
+        padding: 10% 0 20px 0;
+    }
+
 
     .main-container__content__text-sintomas__title h2 {
         color: #FFF;
@@ -657,7 +669,15 @@
         font-weight: 700;
         line-height: normal;
     }
-
+    .main-container__content__text-sintomas__title p,
+    .main-container__content__text-sintomas__title span,
+    .main-container__content__text-sintomas__title h2 {
+        margin-bottom: 36px;
+    }
+  
+    .box-containers-sintomas {
+        margin-left: 16%;
+    }
     .main-container__content__image-sintomas {
         background-image: url("../images/sintomasHombre-desktop.png");
     }
