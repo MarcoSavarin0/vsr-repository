@@ -612,6 +612,7 @@ body {
         position: relative;
         width: 100%;
         margin-top: 7%;
+        
     }
 
     .header-video__container__mobile {
@@ -657,5 +658,10 @@ body {
         gap: 10px;
         cursor: pointer;
 
+    }
+}
+@media  (min-width: 1360px) {
+    .header-container {
+        height: 707px;
     }
 }
