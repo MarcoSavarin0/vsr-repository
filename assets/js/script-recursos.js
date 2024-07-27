@@ -18,6 +18,7 @@ window.addEventListener("load", function () {
             });
         });
     }
+
     boxSelector.forEach(box => {
         box.addEventListener('click', function () {
             boxSelector.forEach(item => item.classList.remove('active'));
@@ -38,26 +39,52 @@ window.addEventListener("load", function () {
                 document.querySelector('#acordeon-3').style.display = 'block';
             }
         });
-    })
+    });
+
     document.querySelectorAll('.accordion-item').forEach(item => {
-        const header = item.querySelector('.accordion-header');
+        const header = item.querySelector('.accordion-header .accordion-button');
         const collapse = item.querySelector('.accordion-collapse');
         const icon = header.querySelector('.fa-solid');
-    
-        collapse.addEventListener('shown.bs.collapse', function () {
-            if (icon) {
+
+        header.addEventListener('click', function () {
+            const allItems = item.closest('.accordion').querySelectorAll('.accordion-item');
+            allItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherCollapse = otherItem.querySelector('.accordion-collapse');
+                    const otherIcon = otherItem.querySelector('.accordion-header .fa-solid');
+                    if (otherCollapse.classList.contains('show')) {
+                        new bootstrap.Collapse(otherCollapse, {
+                            toggle: true
+                        });
+                        if (otherIcon) {
+                            otherIcon.classList.remove('fa-minus');
+                            otherIcon.classList.add('fa-plus');
+                        }
+                    }
+                }
+            });
+
+            if (collapse.classList.contains('show')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
                 icon.classList.remove('fa-plus');
                 icon.classList.add('fa-minus');
             }
         });
-    
+
         collapse.addEventListener('hidden.bs.collapse', function () {
             if (icon) {
                 icon.classList.remove('fa-minus');
                 icon.classList.add('fa-plus');
             }
         });
+
+        collapse.addEventListener('shown.bs.collapse', function () {
+            if (icon) {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        });
     });
-    
-    
-})
+});

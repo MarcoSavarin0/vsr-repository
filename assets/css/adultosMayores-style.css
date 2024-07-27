@@ -119,8 +119,14 @@
         line-height: normal;
     }
     .main-container__content--third{
-        padding: 100px 0;
+        margin: auto;
+       
     }
+    .main-container__content__section-sabiasque {
+        width: 85%;
+        max-width: 1230px;
+    }
+   
 }
 
 @media (min-width: 1360px) {
