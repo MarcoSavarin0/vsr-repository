@@ -6,12 +6,11 @@ window.addEventListener("load", function () {
         hamburguer.classList.toggle("fa-xmark");
     });
 
-
-    document.getElementById('toggle-icon').addEventListener('click', function () {
+    document.querySelector('.references').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
         referencias.classList.toggle('show');
-
-        let icon = this.querySelector('i');
+    
+        let icon = this.querySelector('#toggle-icon i');
         if (referencias.classList.contains('show')) {
             icon.classList.remove('fa-plus');
             icon.classList.add('fa-minus');
@@ -20,6 +19,7 @@ window.addEventListener("load", function () {
             icon.classList.add('fa-plus');
         }
     });
+    
     const menuList = document.getElementById('menu');
     const navContainer = document.querySelector('.nav-container');
 
@@ -37,5 +37,5 @@ window.addEventListener("load", function () {
             menuList.classList.remove('menu-list-padding');
         }
     });
-    
+    console.log("By Marco Savarino");
 });

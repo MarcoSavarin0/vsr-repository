@@ -311,6 +311,17 @@
         font-family: Roboto;
         margin: 0 auto;
     }
+    .title--third-content h2 {
+        flex: 1 0 0;
+        color: var(--color-primario-neutral-900, #000);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 0 15%;
+    }
 
     .container-box--third-content {
         margin: 0 auto;
@@ -356,6 +367,9 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+    .main-container__content__section-question__response{
+        padding: 0 10% !important;
     }
 
 
