@@ -599,8 +599,8 @@ body {
 
     .nav-container__menu__list {
         flex-direction: row;
-
-        gap: 20px;
+      
+        gap: 5rem;
     }
 
     .nav-container__menu {

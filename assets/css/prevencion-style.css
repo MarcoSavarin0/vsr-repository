@@ -66,8 +66,8 @@
 
 .container__content-first-prreguntas {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+ 
     justify-content: space-around;
     align-items: center;
     border-radius: 16px;
@@ -203,7 +203,7 @@
     .main-container__content--second {
         display: flex;
         flex-direction: row;
-        
+
     }
 
     .container__content-second_consejos {
@@ -233,6 +233,12 @@
     .main-container__content--first {
         padding: 80px 138px;
         gap: 40px;
+    }
+    .container__content-first-prreguntas {
+        flex-direction: row;
+    }
+    .box__preguntas {
+        width: 33%;
     }
 }
 
