@@ -1,7 +1,7 @@
 .main-container__content--first {
     background-color: #F8F7F3;
     display: flex;
-    padding: 80px 24px;
+    padding: 80px 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 7px;
@@ -484,7 +484,7 @@
     }
 
     .main-container__content__text-sintomas {
-        width: 70%;
+        width: 82%;
         margin: auto;
     }
 
@@ -638,6 +638,9 @@
     .main-container__content__section-sabiasque{
         width: 85%;
         max-width: 1230px;
+    }
+    .main-container__content__text-sintomas-degrade {
+        padding: 1.4rem;
     }
 }
 
