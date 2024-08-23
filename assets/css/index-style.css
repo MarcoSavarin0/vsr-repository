@@ -645,7 +645,7 @@
 /* Estilos para pantallas extra grandes (larger desktops) */
 @media (max-height: 900px) {
     .main-container__content--second {
-        height: 47rem;
+        height: 42rem;
     }
 }
 
