@@ -228,13 +228,14 @@ body {
 }
 
 .contenedor-referencias.show {
-    max-height: 700px;
+    max-height: 100rem;
     padding: 15px;
     margin: 0 auto;
-    width: 25rem;
+    width: 20rem;
 }
 
-@media (min-width: 1090px) {
+
+@media (min-width: 1230px) {
     .references {
         width: 80rem;
     }
@@ -249,6 +250,23 @@ body {
         padding: 15px;
 
         width: 80rem;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1300px) and (min-height: 500px) and (max-height: 700px){
+    .references {
+        width: 70rem ;
+    }
+    .contenedor-referencias {
+        max-height: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 70rem;
+    }
+    .contenedor-referencias.show {
+        max-height: 700px;
+        padding: 15px;
+
+        width: 70rem;
     }
 }
 
