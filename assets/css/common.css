@@ -265,7 +265,6 @@ body {
     .contenedor-referencias.show {
         max-height: 700px;
         padding: 15px;
-
         width: 70rem;
     }
 }
