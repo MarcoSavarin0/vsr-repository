@@ -645,7 +645,7 @@
 /* Estilos para pantallas extra grandes (larger desktops) */
 @media (max-height: 900px) {
     .main-container__content--second {
-        height: 40rem;
+        height: 47rem;
     }
 }
 
@@ -656,7 +656,7 @@
     }
 
     .main-container__content--second {
-        height: 76vh;
+        height: 43.4rem;
     }
 
     .main-container__content__text-sintomas__title {

@@ -10,8 +10,31 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #1f4827;
+    --sb-size: 0.8rem;
 }
 
+/* body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 17px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 17px;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  } */
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -167,7 +190,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 77%;
+    width: 30rem;
     padding: 24px 1px !important;
     margin: 0 auto;
     border-bottom: 1px solid #000;
@@ -192,11 +215,13 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .contenedor-referencias {
     max-height: 0;
-    width: 80%;
+    width: 30rem;
     margin: 0 auto;
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
@@ -205,8 +230,26 @@ body {
 .contenedor-referencias.show {
     max-height: 700px;
     padding: 15px;
-    padding-left: 20px;
-    
+    margin: 0 auto;
+    width: 25rem;
+}
+
+@media (min-width: 1090px) {
+    .references {
+        width: 80rem;
+    }
+    .contenedor-referencias {
+        max-height: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 80rem;
+    }
+    .contenedor-referencias.show {
+        max-height: 700px;
+        padding: 15px;
+
+        width: 80rem;
+    }
 }
 
 #toggle-icon {
@@ -599,7 +642,7 @@ body {
 
     .nav-container__menu__list {
         flex-direction: row;
-      
+
         gap: 5rem;
     }
 
@@ -671,9 +714,11 @@ body {
         cursor: pointer;
 
     }
+
     .contenedor-referencias {
         font-size: 16px;
     }
+
     .container-references span {
         font-size: 13px;
     }
