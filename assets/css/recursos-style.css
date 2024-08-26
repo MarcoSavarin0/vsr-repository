@@ -199,6 +199,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 0;
 }
 
 .content__third--left__list {
@@ -271,7 +272,7 @@
     text-align: center;
     gap: 80px;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1266px;
     margin: auto;
 }
 
@@ -327,6 +328,9 @@
     .content__third--left {
         padding: 80px 100px;
         width: 50%;
+        height: fit-content;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
     }
 
     .content__third--left h3 {
@@ -361,6 +365,13 @@
 
 @media (min-width: 1360px) {
     .content__third--right {
-        height: 850px;
+        height: 875px;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .container__content-fourth-section {
+        max-width: 1400px;
     }
 }

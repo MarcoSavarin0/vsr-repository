@@ -67,7 +67,7 @@
 .container__content-first-prreguntas {
     display: flex;
     flex-direction: column;
- 
+
     justify-content: space-around;
     align-items: center;
     border-radius: 16px;
@@ -142,6 +142,7 @@
     padding: 40px 24px 80px 24px;
     flex-direction: row;
     flex-wrap: wrap;
+
     gap: 10px;
     justify-content: center;
 }
@@ -180,6 +181,9 @@
 @media (min-width: 600px) {}
 
 @media (min-width: 768px) {
+    .container__content-first-vacunacion h1  {
+        font-size: 39px;
+    }
     .container__content-first-paragraph h2 {
         display: none;
     }
@@ -211,7 +215,7 @@
         width: 55%;
         flex-direction: column;
         justify-content: center;
-        padding: 80px;
+        padding: 2rem 5rem;
         align-items: flex-start;
         gap: 10px;
     }
@@ -234,9 +238,11 @@
         padding: 80px 138px;
         gap: 40px;
     }
+
     .container__content-first-prreguntas {
         flex-direction: row;
     }
+
     .box__preguntas {
         width: 33%;
     }
@@ -244,6 +250,23 @@
 
 @media (min-width: 1360px) {
     .container__content-first-prreguntas {
-        max-width: 1400px;
+        max-width: 1600px;
+    }
+    .main-container__content--first {
+        padding: 80px 75px;
+    }
+
+    .container__content-second_cards {
+        padding-left: 0px;
+        margin-right: 2.1rem;
+    }
+    .main-container__content--second {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1600px) {    
+    .container__content-second_consejos {
+        padding: 2rem 10rem;
     }
 }
