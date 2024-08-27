@@ -216,7 +216,7 @@
     padding: 80px 48px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    
     align-self: stretch;
     max-width: 600px;
 }
@@ -229,6 +229,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-bottom: 0;
 }
 
 .main-container__content__box-1 p {
@@ -239,6 +240,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 2.5rem;
 }
 
 .main-container__content__box-2 {

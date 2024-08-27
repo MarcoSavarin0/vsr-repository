@@ -209,12 +209,11 @@
     gap: 16px;
 }
 
-.content__third--left__list i {
-    display: flex;
-    align-items: flex-start;
-    font-size: 35px;
-    color: #D3FB58;
-
+.content__third--left__list img {
+    border-radius: 30px;
+    background: var(--color-secundario-lima-base, #D3FB58);
+    width: 2.3rem;
+    height: 2.3rem;
 }
 
 .content__third--left__list p {
@@ -284,8 +283,9 @@
     gap: 16px;
     align-self: stretch;
 }
+
 .Acoordeon--list__recursos {
-    list-style:disc;
+    list-style: disc;
 }
 
 .box__fourth p {
@@ -297,6 +297,49 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.content__third__pdfDownload__button {
+    margin-top: 2rem;
+    padding: 16px;
+    border: 2px solid #FFFFFF;
+    width: 17rem;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.content__third__pdfDownload__button span {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.content__third__pdfDownload__button span svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Estilo del loader */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-left-color: #FFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (min-width: 600px) {
@@ -365,7 +408,7 @@
 
 @media (min-width: 1360px) {
     .content__third--right {
-        height: 875px;
+        height: 68rem;
     }
 
 }

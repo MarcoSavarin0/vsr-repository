@@ -37,5 +37,25 @@ window.addEventListener("load", function () {
             menuList.classList.remove('menu-list-padding');
         }
     });
+    document.querySelector('#button-pdf').addEventListener('click', function () {
+        const loader = document.createElement("span");
+        loader.classList.add("loader");
+        const svg = this.querySelector("svg");        
+        svg.style.display = 'none';
+        this.querySelector('.button__pdf').appendChild(loader);
+        loader.style.display = 'inline-block';
+    
+        setTimeout(() => {
+            const link = document.createElement("a");
+            link.href = "assets/pdf/VSR-Preguntas.pdf";
+            link.download = "VSR-Preguntas.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+    
+            loader.remove();
+            svg.style.display = 'inline-block';
+        }, 1000); 
+    });
     console.log("By Marco Savarino");
 });

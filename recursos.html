@@ -69,13 +69,15 @@
 <body>
     <nav class="nav-container">
         <div class="nav-container__logo" id="header-logo">
-            <img src="./assets/images/logo.png" alt="logo" class="img-fluid">
+            <a href="index.html">
+                <img src="./assets/images/logo.png" alt="logo" class="img-fluid">
+            </a>
         </div>
         <hr class="nav-container__hr">
         <div class="nav-container__menu" id="menu">
             <ul class="nav-container__menu__list">
                 <li class="nav-container__menu__list__item">
-                    <a href="index.html" class="nav-container__menu__list__item__link">¿Que es el VRS?</a>
+                    <a href="index.html" class="nav-container__menu__list__item__link">¿Qué es el VSR?</a>
                 </li>
                 <li class="nav-container__menu__list__item">
                     <a href="adultosMayores.html" class="nav-container__menu__list__item__link">VSR y adultos
@@ -165,7 +167,7 @@
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     El VSR puede causar fiebre, tos, dolor de garganta, goteo nasal, congestión, dolor
-                                    de cabeza y cansancio. Aunque la mayoría de los síntomas del VSR son leves, en las
+                                    de cabeza y cansancio. <br> Aunque la mayoría de los síntomas del VSR son leves, en las
                                     infecciones más graves puede presentarse falta de aire o dificultad para respirar.
                                 </div>
                             </div>
@@ -183,9 +185,7 @@
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    El VSR puede causar fiebre, tos, dolor de garganta, goteo nasal, congestión, dolor
-                                    de cabeza y cansancio. Aunque la mayoría de los síntomas del VSR son leves, en las
-                                    infecciones más graves puede presentarse falta de aire o dificultad para respirar.
+                                    Por lo general, las personas infectadas con VSR pueden contagiar a otros durante un período de entre 3 y 8 días. Sin embargo, aquellos adultos cuyo sistema inmunitario se encuentre débil, pueden continuar contagiando el virus incluso hasta por 4 semanas después de haber presentado los primeros síntomas.
                                 </div>
                             </div>
                         </div>
@@ -403,34 +403,44 @@
                 <h3>Preguntas que podés hacerle a tu médico o médica acerca del VSR</h3>
                 <p class="content__third--left__text">Revisá y seleccioná las preguntas que se relacionen con vos y tu
                     caso, para que las lleves a tu
-                    próxima consulta.</p>
+                    próxima consulta: </p>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>Como adulto mayor o adulto con una  enfermedad crónica, ¿debo preocuparme por el VSR?</p>
                 </div>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>¿Cuál es mi riesgo de complicaciones debido al VSR?</p>
                 </div>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>¿Cómo podría el VSR afectar mi enfermedad crónica?</p>
                 </div>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>¿Qué síntomas puedo tener si contraigo VSR?</p>
                 </div>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>¿Pude haber tenido una infección por VSR en el pasado?</p>
                 </div>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>¿Cómo se contagia el VSR?</p>
                 </div>
                 <div class="content__third--left__list">
-                    <i class="fa-solid fa-circle-question"></i>
+                    <img src="./assets/images/bi_question.svg" alt="icono de pregunta">
                     <p>¿Qué puedo hacer para prevenir el VSR?</p>
+                </div>
+                <div class="content__third__pdfDownload__button" id="button-pdf">
+                    <span class="button__pdf">
+                       
+                        Descargá las preguntas 
+                        <span class="loader" id="loader" style="display: none;"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                            <path d="M15.9998 21.2694L11.2812 16.5521L12.2252 15.5921L15.3332 18.7001V7.16675H16.6665V18.7001L19.7732 15.5934L20.7185 16.5521L15.9998 21.2694ZM8.82117 25.8334C8.20695 25.8334 7.6945 25.6281 7.28384 25.2174C6.87317 24.8067 6.66739 24.2939 6.6665 23.6787V20.4481H7.99984V23.6787C7.99984 23.8841 8.08517 24.0725 8.25584 24.2441C8.4265 24.4156 8.6145 24.501 8.81984 24.5001H23.1798C23.3843 24.5001 23.5723 24.4147 23.7438 24.2441C23.9154 24.0734 24.0007 23.885 23.9998 23.6787V20.4481H25.3332V23.6787C25.3332 24.293 25.1278 24.8054 24.7172 25.2161C24.3065 25.6267 23.7936 25.8325 23.1785 25.8334H8.82117Z" fill="white"/>
+                        </svg>
+                    </span>
                 </div>
             </div>
             <div class="content__third--right"></div>
