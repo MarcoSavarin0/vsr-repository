@@ -364,7 +364,6 @@
         background-image: url('../images/doctores-desktop.png');
         background-size: cover;
         height: 1000px;
-        max-height: 1020px;
         width: 50%;
     }
 
@@ -407,8 +406,12 @@
 }
 
 @media (min-width: 1360px) {
+    
     .content__third--right {
-        height: 68rem;
+        height: 56rem;
+    }
+    .content__third--left {
+        height: 50rem;
     }
 
 }
