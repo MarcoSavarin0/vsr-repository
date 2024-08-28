@@ -208,12 +208,14 @@
     align-self: stretch;
     gap: 16px;
 }
-
-.content__third--left__list img {
+.container__icon__list {
     border-radius: 30px;
     background: var(--color-secundario-lima-base, #D3FB58);
     width: 2.3rem;
     height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content__third--left__list p {
@@ -300,7 +302,7 @@
 }
 
 .content__third__pdfDownload__button {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 16px;
     border: 2px solid #FFFFFF;
     width: 17rem;
@@ -372,7 +374,7 @@
         width: 50%;
         height: fit-content;
         margin-bottom: 2rem;
-        margin-top: 3rem;
+       
     }
 
     .content__third--left h3 {
