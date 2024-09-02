@@ -57,5 +57,5 @@ window.addEventListener("load", function () {
             svg.style.display = 'inline-block';
         }, 1000); 
     });
-    console.log("By Marco Savarino");
+
 });
