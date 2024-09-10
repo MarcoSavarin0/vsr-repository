@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
 
     window.addEventListener('scroll', function () {
         if (window.innerWidth > 770) {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 30) {
                 navContainer.classList.add('efecto-menu-conatainer');
                 menuList.classList.add('menu-list-padding');
             } else {

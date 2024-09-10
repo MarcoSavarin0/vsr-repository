@@ -746,6 +746,9 @@ body {
         font-size: 14px;
         font-weight: 600;
     }
+    .footer-links-container p {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 1360px) {
