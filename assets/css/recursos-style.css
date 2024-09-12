@@ -365,33 +365,33 @@
     .content__third--right {
         background-image: url('../images/doctores-desktop.png');
         background-size: cover;
-        height: 1000px;
+        height: 45rem;
         width: 50%;
     }
 
     .content__third--left {
-        padding: 80px 100px;
+        padding: 30px 100px;
         width: 50%;
         height: fit-content;
         margin-bottom: 2rem;
-       
+        height: 40rem;
     }
 
     .content__third--left h3 {
-        flex: 1 0 0;
+        flex: 0 0 0;
         color: #FFF;
         font-family: Roboto;
-        font-size: 39px;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
 
     .content__third--left__text {
-        flex: 1 0 0;
+        flex: 0 0 0;
         color: #FFF;
         font-family: Roboto;
-        font-size: 18px;
+        font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -400,10 +400,14 @@
     .content__third--left__list p {
         color: var(--color-primario-neutral-100, #F7F9FD);
         font-family: Roboto;
-        font-size: 16px;
+        font-size: 0.9rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+    .container__icon__list  {
+        width: 1.8rem;
+        height: 1.8rem;
     }
 }
 
@@ -413,7 +417,34 @@
         height: 56rem;
     }
     .content__third--left {
+        padding: 80px 100px;
         height: 50rem;
+    }
+    .content__third--left h3 {
+        
+        flex: 1 0 0;
+        font-size: 39px;
+
+    }
+    .content__third--left__text {
+        flex: 1 0 0;
+        font-size: 18px;
+    }
+    .content__third--left__list p {
+        font-size: 1rem;
+    }
+    .container__icon__list {
+        border-radius: 30px;
+        background: var(--color-secundario-lima-base, #D3FB58);
+        width: 2.3rem;
+        height: 2.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container__icon__list  {
+        width: 2.3rem;
+        height: 2.3rem;
     }
 
 }
@@ -422,4 +453,5 @@
     .container__content-fourth-section {
         max-width: 1400px;
     }
+    
 }
