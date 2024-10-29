@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
     document.querySelector('.references').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
         referencias.classList.toggle('show');
-    
+
         let icon = this.querySelector('#toggle-icon i');
         if (referencias.classList.contains('show')) {
             icon.classList.remove('fa-plus');
@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
             icon.classList.add('fa-plus');
         }
     });
-    
+
     const menuList = document.getElementById('menu');
     const navContainer = document.querySelector('.nav-container');
 
@@ -37,14 +37,27 @@ window.addEventListener("load", function () {
             menuList.classList.remove('menu-list-padding');
         }
     });
+    const thumbsIcons = document.querySelectorAll(".container-thumbs i");
+    const thankYouMessage = document.getElementById("thankYouMessage");
+    thumbsIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            thumbsIcons.forEach(icon => icon.classList.remove("selected"));
+
+            icon.classList.add("selected");
+
+            thankYouMessage.style.display = "block";
+        });
+    });
+
+
     document.querySelector('#button-pdf').addEventListener('click', function () {
         const loader = document.createElement("span");
         loader.classList.add("loader");
-        const svg = this.querySelector("svg");        
+        const svg = this.querySelector("svg");
         svg.style.display = 'none';
         this.querySelector('.button__pdf').appendChild(loader);
         loader.style.display = 'inline-block';
-    
+
         setTimeout(() => {
             const link = document.createElement("a");
             link.href = "assets/pdf/VSR-Preguntas.pdf";
@@ -52,10 +65,12 @@ window.addEventListener("load", function () {
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-    
+
             loader.remove();
             svg.style.display = 'inline-block';
-        }, 1000); 
+        }, 1000);
     });
+   
 
+   
 });

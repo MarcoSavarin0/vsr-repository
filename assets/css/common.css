@@ -253,6 +253,58 @@ body {
     border: #1F4827 1px solid;
 }
 
+:root {
+    --primary-color: #1f4827;
+    --text-color: #ffffff;
+    --icon-size: 22px;
+    --selected-color: #a8e5ac;
+}
+
+.container-informacion-util {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    background-color: var(--primary-color);
+   
+}
+
+.title-informacion-util h4 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.container-thumbs {
+    display: flex;
+    gap: 1.5em;
+}
+
+.container-thumbs i {
+    font-size: var(--icon-size);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.container-thumbs i:hover {
+    color: var(--selected-color);
+    transform: scale(1.1);
+}
+
+.container-thumbs i.selected {
+    color: var(--selected-color);
+}
+
+.thank-you-message {
+    display: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-top: 1em;
+}
+
 
 @media (min-width: 1230px) {
     .references {
