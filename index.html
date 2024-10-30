@@ -64,6 +64,7 @@
     </head>
 
     <body>
+
         <nav class="nav-container">
             <div class="nav-container__logo" id="header-logo">
                 <a href="index.html">
@@ -355,10 +356,13 @@
                     <h4>¿Esta información te fue útil?</h4>
                 </div>
                 <div class="container-thumbs">
-                    <i class="fa-solid fa-thumbs-up" aria-label="Útil" tabindex="0" data-vote="up"></i>
-                    <i class="fa-solid fa-thumbs-down" aria-label="No útil" tabindex="0" data-vote="down"></i>
+                    <i class="fa-solid fa-thumbs-up" aria-label="Útil"
+                        tabindex="0" data-vote="up"></i>
+                    <i class="fa-solid fa-thumbs-down" aria-label="No útil"
+                        tabindex="0" data-vote="down"></i>
                 </div>
-                <p class="thank-you-message" id="thankYouMessage">Gracias por tu Feedback!</p>
+                <p class="thank-you-message" id="thankYouMessage">Gracias por tu
+                    Feedback!</p>
             </div>
             <section id="about" class="about references-container">
                 <div class="container-references">
@@ -480,7 +484,7 @@
                                     <p>POLÍTICA DE COOKIES</p>
                                 </a>
                                 <div class="gsk-pro">
-                                    <a href target="_blank"
+                                    <a href="https://gskpro.com/es-ar/" target="_blank"
                                         rel="noopener noreferrer">
                                         <p>GSK PRO</p>
                                     </a>
@@ -502,7 +506,18 @@
 
         };
     </script>
-
+        <div class="modal" id="modal">
+            <div class="container-modal-content">
+                <div class="modal-content">
+                    <p>Después de leer esta información,</p>
+                    <h2>¿Vas a ir al médico?</h2>
+                    <div class="buttons-container-modal">
+                        <button id="yesBtn">Sí</button>
+                        <button id="noBtn">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" async>
         var environment = "prod";
         if (location.href.includes("gskinternet") || location.href.includes("staging")) {

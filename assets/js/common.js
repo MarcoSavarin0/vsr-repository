@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
         hamburguer.classList.toggle("fa-xmark");
     });
 
-  
+
 
     const menuList = document.getElementById('menu');
     const navContainer = document.querySelector('.nav-container');
@@ -36,6 +36,42 @@ window.addEventListener("load", function () {
             thankYouMessage.style.display = "block";
         });
     });
+    const modal = document.getElementById('modal');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const modalTimeout = 3600000; 
+    function showModal() {
+        const currentTime = new Date().getTime();
+        
+        const lastModalHideTime = sessionStorage.getItem('modalHideTime');
+    
+        if (!lastModalHideTime || (currentTime - lastModalHideTime > modalTimeout)) {
+            modal.style.display = 'flex';
+        } else {
+            console.log("El modal ya fue mostrado en esta sesión y no ha pasado el tiempo suficiente.");
+        }
+    }
+
+    function hideModal() {
+        const currentTime = new Date().getTime();
+        sessionStorage.setItem('modalHideTime', currentTime);
+        modal.style.display = 'none';
+    }
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 700) {
+            showModal();
+        }
+    });
+
+    yesBtn.addEventListener('click', function () {
+        hideModal();
+    });
+
+    noBtn.addEventListener('click', function () {
+        hideModal();
+    });
+
 
     document.querySelector('.references').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
@@ -70,7 +106,7 @@ window.addEventListener("load", function () {
             svg.style.display = 'inline-block';
         }, 1000);
     });
-   
 
-   
+
+
 });
