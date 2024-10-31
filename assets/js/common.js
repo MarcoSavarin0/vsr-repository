@@ -39,17 +39,35 @@ window.addEventListener("load", function () {
     const modal = document.getElementById('modal');
     const yesBtn = document.getElementById('yesBtn');
     const noBtn = document.getElementById('noBtn');
-    const modalTimeout = 3600000; 
+    const modalTimeout = 3600000;
     function showModal() {
         const currentTime = new Date().getTime();
-        
+
         const lastModalHideTime = sessionStorage.getItem('modalHideTime');
-    
+
         if (!lastModalHideTime || (currentTime - lastModalHideTime > modalTimeout)) {
             modal.style.display = 'flex';
         } else {
             console.log("El modal ya fue mostrado en esta sesión y no ha pasado el tiempo suficiente.");
         }
+    }
+    function showMessageAfterResponse(response) {
+        const modalContent = document.querySelector('.modal-content');
+        if(response === 'No') {
+        modalContent.innerHTML = `
+           <p> <strong>¡Gracias por tu respuesta!</strong></p>
+            <p>Haber llegado hasta acá es el primer paso. Siempre podés consultar con el Medico cuando estés listo/a.</p>
+            <button id="closeModalBtn">Cerrar</button>
+        `;
+        } else {
+            modalContent.innerHTML = `
+            <p> <strong>¡Gracias por tu respuesta!</strong></p>
+            <p>Hablar con el Medico es un gran paso para proteger la salud de quienes más importan.</p>
+            <button id="closeModalBtn">Cerrar</button>
+        `;
+        }
+
+        document.getElementById('closeModalBtn').addEventListener('click', hideModal);
     }
 
     function hideModal() {
@@ -65,11 +83,11 @@ window.addEventListener("load", function () {
     });
 
     yesBtn.addEventListener('click', function () {
-        hideModal();
+        showMessageAfterResponse('Sí');
     });
 
     noBtn.addEventListener('click', function () {
-        hideModal();
+        showMessageAfterResponse('No');
     });
 
 
