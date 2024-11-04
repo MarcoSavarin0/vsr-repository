@@ -56,13 +56,13 @@ window.addEventListener("load", function () {
         if(response === 'No') {
         modalContent.innerHTML = `
            <p> <strong>¡Gracias por tu respuesta!</strong></p>
-            <p>Haber llegado hasta acá es el primer paso. Siempre podés consultar con el Medico cuando estés listo/a.</p>
+            <p>Haber llegado hasta acá es el primer paso. Siempre podés consultar con el médico cuando estés listo/a.</p>
             <button id="closeModalBtn">Cerrar</button>
         `;
         } else {
             modalContent.innerHTML = `
             <p> <strong>¡Gracias por tu respuesta!</strong></p>
-            <p>Hablar con el Medico es un gran paso para proteger la salud de quienes más importan.</p>
+            <p>Hablar con el médico es un gran paso para proteger tu salud.</p>
             <button id="closeModalBtn">Cerrar</button>
         `;
         }
