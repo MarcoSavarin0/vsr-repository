@@ -40,30 +40,55 @@ window.addEventListener("load", function () {
     const yesBtn = document.getElementById('yesBtn');
     const noBtn = document.getElementById('noBtn');
     const modalTimeout = 3600000;
+    const modalContent = document.querySelector('.modal-content');
     function showModal() {
         const currentTime = new Date().getTime();
 
-        const lastModalHideTime = sessionStorage.getItem('modalHideTime');
+        const lastModalHideTime = localStorage.getItem('modalHideTime');
 
         if (!lastModalHideTime || (currentTime - lastModalHideTime > modalTimeout)) {
-            modal.style.display = 'flex';
+            modalContent.innerHTML = `
+            <p>Después de leer esta información,</p>
+            <h2>¿vas a consultarle a tu médico acerca del VSR?</h2>
+            <div class="buttons-container-modal">
+                <button id="noBtn">No</button>
+                <button id="yesBtn">Sí</button>
+            </div>
+        `;
+
+        // Asignamos los eventos de clic a los nuevos botones en cada apertura
+        document.getElementById('noBtn').addEventListener('click', () => showMessageAfterResponse('No'));
+        document.getElementById('yesBtn').addEventListener('click', () => showMessageAfterResponse('Sí'));
+
+        modal.style.display = 'flex';
+        localStorage.removeItem('modalHideTime');
+            
         } else {
             console.log("El modal ya fue mostrado en esta sesión y no ha pasado el tiempo suficiente.");
         }
     }
     function showMessageAfterResponse(response) {
         const modalContent = document.querySelector('.modal-content');
-        if(response === 'No') {
-        modalContent.innerHTML = `
+        console.log(response);
+        if (response === 'No') {
+            modalContent.innerHTML = `
            <p> <strong>¡Gracias por tu respuesta!</strong></p>
             <p>Haber llegado hasta acá es el primer paso. Siempre podés consultar con el médico cuando estés listo/a.</p>
             <button id="closeModalBtn">Cerrar</button>
         `;
-        } else {
+        } else if (response === 'Sí') {
             modalContent.innerHTML = `
             <p> <strong>¡Gracias por tu respuesta!</strong></p>
             <p>Hablar con el médico es un gran paso para proteger tu salud.</p>
             <button id="closeModalBtn">Cerrar</button>
+        `;
+        } else {
+            modalContent.innerHTML = `
+            <p>Después de leer esta información,</p>
+            <h2>¿vas a consultarle a tu médico acerca del VSR?</h2>
+            <div class="buttons-container-modal">
+                <button id="noBtn">No</button>
+                <button id="yesBtn">Sí</button>
         `;
         }
 
@@ -72,12 +97,12 @@ window.addEventListener("load", function () {
 
     function hideModal() {
         const currentTime = new Date().getTime();
-        sessionStorage.setItem('modalHideTime', currentTime);
+        localStorage.setItem('modalHideTime', currentTime);
         modal.style.display = 'none';
     }
 
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 700) {
+        if (window.scrollY > 700) {             
             showModal();
         }
     });
@@ -90,7 +115,7 @@ window.addEventListener("load", function () {
         showMessageAfterResponse('No');
     });
 
-
+    
     document.querySelector('.references').addEventListener('click', function () {
         let referencias = document.getElementById('referencias');
         referencias.classList.toggle('show');
