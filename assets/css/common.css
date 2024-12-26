@@ -241,16 +241,21 @@ body {
 }
 
 .gsk-pro a p {
-    background-color: #1f4827;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #D3FB57;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 30px;
+    
+}
+
+.gsk-pro a span {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .gsk-pro a p:hover {
-    background-color: #ffffff;
-    color: #1f4827;
-    border: #1F4827 1px solid;
+    background-color: #cff264;
+    color: black;
 }
 
 :root {

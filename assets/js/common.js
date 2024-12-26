@@ -102,7 +102,7 @@ window.addEventListener("load", function () {
     }
 
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 700) {             
+        if (window.scrollY > 1850) {             
             showModal();
         }
     });
