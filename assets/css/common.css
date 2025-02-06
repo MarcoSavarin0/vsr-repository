@@ -245,7 +245,7 @@ body {
     color: black;
     padding: 15px 20px;
     border-radius: 30px;
-    
+
 }
 
 .gsk-pro a span {
@@ -272,7 +272,7 @@ body {
     align-items: center;
     gap: 1.5em;
     background-color: var(--primary-color);
-   
+
 }
 
 .title-informacion-util h4 {
@@ -309,9 +309,10 @@ body {
     font-size: 1.2rem;
     margin-top: 1em;
 }
+
 /* Estilos básicos del modal */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -322,6 +323,7 @@ body {
     align-items: center;
     z-index: 1000;
 }
+
 .container-modal-content {
     width: 100%;
     height: 100%;
@@ -335,9 +337,11 @@ body {
     border-radius: 50px;
     text-align: center;
 }
-.modal-content h2 { 
+
+.modal-content h2 {
     font-size: 20px;
 }
+
 .buttons-container-modal {
     width: 100%;
 }
@@ -357,6 +361,7 @@ body {
 .modal-content button:hover {
     background-color: #1f4827d2;
 }
+
 .close-message {
     margin-top: 20px;
 }
@@ -376,6 +381,23 @@ body {
     background-color: #1f4827d2;
 }
 
+.iframe-youtube {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.iframe-youtube iframe {
+    width: 85%;
+    max-width: 1230px;
+    height: 550px;
+    border: none;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
 
 @media (min-width: 1230px) {
     .references {
@@ -392,12 +414,14 @@ body {
     .contenedor-referencias.show {
         max-height: 700px;
         padding: 15px;
-        
+
         width: 80rem;
     }
+
     .container-modal-content {
         width: 50%;
     }
+
     .buttons-container-modal {
         margin-top: 10px;
         display: flex;
@@ -901,10 +925,12 @@ body {
     .footer-links-container p {
         font-size: 14px;
     }
+
     .footer-links-container {
-        gap: 15px; 
+        gap: 15px;
         flex-wrap: nowrap;
     }
+
     .footer-links-container a {
         white-space: nowrap;
     }
